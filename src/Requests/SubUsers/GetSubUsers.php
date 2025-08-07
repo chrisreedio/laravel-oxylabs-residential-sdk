@@ -2,31 +2,20 @@
 
 namespace ChrisReedIO\OxylabsResidentialSDK\Requests\SubUsers;
 
-use DateTime;
+use ChrisReedIO\OxylabsResidentialSDK\Requests\BaseRequest;
 use Saloon\Enums\Method;
-use Saloon\Http\Request;
 
 /**
  * getSubUsers
  *
  * Retrieves all active sub users for the given user.
  */
-class GetSubUsers extends Request
+class GetSubUsers extends BaseRequest
 {
-	protected Method $method = Method::GET;
+    protected Method $method = Method::GET;
 
-
-	public function resolveEndpoint(): string
-	{
-		return "/users/{$this->userId}/sub-users";
-	}
-
-
-	/**
-	 * @param string $userId
-	 */
-	public function __construct(
-		protected string $userId,
-	) {
-	}
+    public function resolveEndpoint(): string
+    {
+        return "/users/{$this->getUserId()}/sub-users";
+    }
 }
