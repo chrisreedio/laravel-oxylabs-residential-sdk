@@ -8,6 +8,7 @@ use ChrisReedIO\OxylabsResidentialSDK\Resource\Users;
 use Illuminate\Support\Facades\Cache;
 use Saloon\Http\Auth\TokenAuthenticator;
 use Saloon\Http\Connector;
+use Saloon\Http\Response;
 
 /**
  * Oxylabs Residential Proxy - Public API
@@ -68,9 +69,9 @@ class OxylabsResidential extends Connector
         return new TokenAuthenticator($this->bearerToken);
     }
 
-    public function login(): Login
+    public function login(string $username, string $password): Response
     {
-        return new Login($this);
+        return (new Login($this))->login($username, $password);
     }
 
     public function subUsers(): SubUsers
