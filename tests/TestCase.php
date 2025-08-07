@@ -2,9 +2,9 @@
 
 namespace ChrisReedIO\OxylabsResidential\Tests;
 
+use ChrisReedIO\OxylabsResidential\OxylabsResidentialServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ChrisReedIO\OxylabsResidential\OxylabsResidentialServiceProvider;
 
 class TestCase extends Orchestra
 {

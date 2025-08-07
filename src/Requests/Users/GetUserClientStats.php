@@ -2,7 +2,6 @@
 
 namespace ChrisReedIO\OxylabsResidentialSDK\Requests\Users;
 
-use DateTime;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
@@ -16,20 +15,14 @@ use Saloon\Http\Request;
  */
 class GetUserClientStats extends Request
 {
-	protected Method $method = Method::GET;
+    protected Method $method = Method::GET;
 
+    public function resolveEndpoint(): string
+    {
+        return "/users/{$this->userId}/client-stats";
+    }
 
-	public function resolveEndpoint(): string
-	{
-		return "/users/{$this->userId}/client-stats";
-	}
-
-
-	/**
-	 * @param string $userId
-	 */
-	public function __construct(
-		protected string $userId,
-	) {
-	}
+    public function __construct(
+        protected string $userId,
+    ) {}
 }
