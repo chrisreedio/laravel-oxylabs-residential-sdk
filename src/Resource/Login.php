@@ -8,8 +8,8 @@ use Saloon\Http\Response;
 
 class Login extends BaseResource
 {
-	public function login(): Response
-	{
-		return $this->connector->send(new LoginRequest());
-	}
+    public function login(string $username, string $password): Response
+    {
+        return $this->connector->send(new LoginRequest($username, $password));
+    }
 }
