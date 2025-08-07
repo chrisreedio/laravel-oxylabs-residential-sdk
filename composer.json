@@ -37,13 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "ChrisReedIO\\OxylabsResidential\\": "src/",
-            "ChrisReedIO\\OxylabsResidential\\Database\\Factories\\": "database/factories/"
+            "ChrisReedIO\\OxylabsResidentialSDK\\": "src/",
+            "ChrisReedIO\\OxylabsResidentialSDK\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ChrisReedIO\\OxylabsResidential\\Tests\\": "tests/",
+            "ChrisReedIO\\OxylabsResidentialSDK\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -65,10 +65,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ChrisReedIO\\OxylabsResidential\\OxylabsResidentialServiceProvider"
+                "ChrisReedIO\\OxylabsResidentialSDK\\OxylabsResidentialServiceProvider"
             ],
             "aliases": {
-                "OxylabsResidential": "ChrisReedIO\\OxylabsResidential\\Facades\\OxylabsResidential"
+                "OxylabsResidential": "ChrisReedIO\\OxylabsResidentialSDK\\Facades\\OxylabsResidential"
             }
         }
     },

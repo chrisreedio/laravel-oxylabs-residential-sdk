@@ -1,6 +1,6 @@
 <?php
 
-namespace ChrisReedIO\OxylabsResidential;
+namespace ChrisReedIO\OxylabsResidentialSDK;
 
 use ChrisReedIO\OxylabsResidentialSDK\Resource\Login;
 use ChrisReedIO\OxylabsResidentialSDK\Resource\SubUsers;
