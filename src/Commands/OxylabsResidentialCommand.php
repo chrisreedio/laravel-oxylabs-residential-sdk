@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ChrisReedIO\OxylabsResidential\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class OxylabsResidentialCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-oxylabs-residential-sdk';
 
     public $description = 'My command';
 
