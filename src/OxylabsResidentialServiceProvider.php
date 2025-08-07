@@ -1,10 +1,10 @@
 <?php
 
-namespace ChrisReedIO\OxylabsResidential;
+namespace ChrisReedIO\OxylabsResidentialSDK;
 
+use ChrisReedIO\OxylabsResidential\Commands\OxylabsResidentialCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ChrisReedIO\OxylabsResidential\Commands\OxylabsResidentialCommand;
 
 class OxylabsResidentialServiceProvider extends PackageServiceProvider
 {
