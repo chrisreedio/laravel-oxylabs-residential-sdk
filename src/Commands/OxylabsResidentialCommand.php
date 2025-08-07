@@ -1,6 +1,6 @@
 <?php
 
-namespace ChrisReedIO\OxylabsResidential\Commands;
+namespace ChrisReedIO\OxylabsResidentialSDK\Commands;
 
 use Illuminate\Console\Command;
 

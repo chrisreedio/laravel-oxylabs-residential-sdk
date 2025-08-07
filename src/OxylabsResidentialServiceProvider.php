@@ -2,7 +2,7 @@
 
 namespace ChrisReedIO\OxylabsResidentialSDK;
 
-use ChrisReedIO\OxylabsResidential\Commands\OxylabsResidentialCommand;
+use ChrisReedIO\OxylabsResidentialSDK\Commands\OxylabsResidentialCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

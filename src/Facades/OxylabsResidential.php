@@ -1,6 +1,6 @@
 <?php
 
-namespace ChrisReedIO\OxylabsResidential\Facades;
+namespace ChrisReedIO\OxylabsResidentialSDK\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -11,6 +11,6 @@ class OxylabsResidential extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ChrisReedIO\OxylabsResidential\OxylabsResidential::class;
+        return \ChrisReedIO\OxylabsResidentialSDK\OxylabsResidential::class;
     }
 }

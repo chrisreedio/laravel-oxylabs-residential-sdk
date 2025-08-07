@@ -1,6 +1,6 @@
 <?php
 
-namespace ChrisReedIO\OxylabsResidential\Database\Factories;
+namespace ChrisReedIO\OxylabsResidentialSDK\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
