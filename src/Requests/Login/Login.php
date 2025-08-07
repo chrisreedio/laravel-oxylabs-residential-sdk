@@ -2,10 +2,12 @@
 
 namespace ChrisReedIO\OxylabsResidentialSDK\Requests\Login;
 
-use DateTime;
+use ChrisReedIO\OxylabsResidentialSDK\Dto\UserToken;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
+use Saloon\Http\Auth\BasicAuthenticator;
 use Saloon\Http\Request;
+use Saloon\Http\Response;
 use Saloon\Traits\Body\HasJsonBody;
 
 /**
@@ -29,18 +31,27 @@ use Saloon\Traits\Body\HasJsonBody;
  */
 class Login extends Request implements HasBody
 {
-	use HasJsonBody;
+    use HasJsonBody;
 
-	protected Method $method = Method::POST;
+    protected Method $method = Method::POST;
 
+    public function resolveEndpoint(): string
+    {
+        return '/login';
+    }
 
-	public function resolveEndpoint(): string
-	{
-		return "/login";
-	}
+    public function __construct(
+        protected string $username,
+        protected string $password,
+    ) {}
 
+    public function getAuthenticator(): BasicAuthenticator
+    {
+        return new BasicAuthenticator($this->username, $this->password);
+    }
 
-	public function __construct()
-	{
-	}
+    public function createDtoFromResponse(Response $response): UserToken
+    {
+        return UserToken::from($response->json());
+    }
 }
