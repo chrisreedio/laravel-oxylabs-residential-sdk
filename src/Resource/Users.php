@@ -8,11 +8,8 @@ use Saloon\Http\Response;
 
 class Users extends BaseResource
 {
-	/**
-	 * @param string $userId
-	 */
-	public function getUserClientStats(string $userId): Response
-	{
-		return $this->connector->send(new GetUserClientStats($userId));
-	}
+    public function getUserClientStats(string $userId): Response
+    {
+        return $this->connector->send(new GetUserClientStats($userId));
+    }
 }

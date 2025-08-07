@@ -2,7 +2,6 @@
 
 namespace ChrisReedIO\OxylabsResidentialSDK\Requests\SubUsers;
 
-use DateTime;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
@@ -29,24 +28,17 @@ use Saloon\Traits\Body\HasJsonBody;
  */
 class UpdateSubUser extends Request implements HasBody
 {
-	use HasJsonBody;
+    use HasJsonBody;
 
-	protected Method $method = Method::PATCH;
+    protected Method $method = Method::PATCH;
 
+    public function resolveEndpoint(): string
+    {
+        return "/users/{$this->userId}/sub-users/{$this->subUserId}";
+    }
 
-	public function resolveEndpoint(): string
-	{
-		return "/users/{$this->userId}/sub-users/{$this->subUserId}";
-	}
-
-
-	/**
-	 * @param string $userId
-	 * @param int $subUserId
-	 */
-	public function __construct(
-		protected string $userId,
-		protected int $subUserId,
-	) {
-	}
+    public function __construct(
+        protected string $userId,
+        protected int $subUserId,
+    ) {}
 }
